@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>readiNUS - SEP planning made easy</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            border-bottom: 1px solid #555;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            margin-right: 20px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #999;
+        }
+
+        .btn-enquire {
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 5px 15px;
+        }
+
+        .btn-enquire:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .hero-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 15px;
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+        }
+
+        .hero-image {
+            max-width: 50%;
+            transform: rotate(-3deg);
+            border: 2px solid #b5895d;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .diamond-bullets {
+            color: #b5895d;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Modal Custom Styles */
+        .modal-dialog {
+            max-width: 100%;
+            margin: 0;
+        }
+
+        .modal-content {
+            background-color: #000;
+            color: #fff;
+            border: 1px solid #b5895d;
+            text-align: center;
+            padding: 20px;
+            height: 100vh;
+            border-radius: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .modal-content input,
+        .modal-content button {
+            border: 1px solid #b5895d;
+            color: #fff;
+            background: none;
+        }
+
+        .modal-content input::placeholder {
+            color: #999;
+        }
+
+        .modal-content input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .modal-content button {
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+
+        .modal-content .form-group {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .modal-content .form-group input {
+            flex: 1;
+        }
+
+        .slide-in {
+            animation: slide-in 0.5s ease-out forwards;
+        }
+
+        @keyframes slide-in {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        /* Close Button */
+        .modal-content .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: #fff;
+            font-size: 2rem;
+            font-weight: bold;
+            border: none;
+            background: none;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .modal-title {
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">readiNUS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <button class="btn btn-enquire" data-toggle="modal" data-target="#enquireModal">Enquire Now</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container-fluid hero-section">
+        <div class="hero-text">
+            <h1>SEP planning made easy</h1>
+            <div class="diamond-bullets">
+                &bull; &bull; &bull; &bull;
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+        </div>
+        <div class="hero-image">
+            <img src="./icon.jpg" alt="readiNUS logo">
+        </div>
+    </div>
+
+    <!-- Enquire Modal -->
+    <div class="modal fade" id="enquireModal" tabindex="-1" aria-labelledby="enquireModalLabel" aria-hidden="true">
+        <div class="modal-dialog slide-in">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    &times;
+                </button>
+                <h5 class="modal-title" id="enquireModalLabel">Your space to experience</h5>
+                <form>
+                    <input type="text" placeholder="FULL NAME">
+                    <div class="form-group">
+                        <input type="email" placeholder="EMAIL ADDRESS">
+                        <input type="tel" placeholder="PHONE NUMBER">
+                    </div>
+                    <button type="submit">ENQUIRE NOW</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
